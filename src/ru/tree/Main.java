@@ -23,9 +23,12 @@ public class Main {
         peopleTree.addeadHuman(person4);
         peopleTree.addeadHuman(person5);
 
+        //добавляем родителей
+        person1.setMother(person2);
+        person1.setFather(person3);
 
 //
-        System.out.println(peopleTree.shareHuman("Дмитрий"));
+        System.out.println(peopleTree.shareHuman("Иван").getInfo());
 
     }
 }

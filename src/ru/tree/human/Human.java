@@ -18,9 +18,7 @@ public class Human {
     }
 
     public Human(String name, LocalDate dob, Gender gender, int maxAge) {
-        this.name = name;
-        this.dob = dob;
-        this.gender = gender;
+        this(name,dob,gender);
         this.dod = LocalDate.now().minus(Period.ofYears(maxAge));
     }
 
@@ -82,6 +80,9 @@ public class Human {
 
     @Override
     public String toString() {
+        return  name;
+    }
+    public String getInfo() {
         return "Человек{" +
                 "Имя='" + name + '\'' +
                 ", Дата рождения=" + dob +
