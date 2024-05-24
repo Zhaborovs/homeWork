@@ -1,10 +1,11 @@
 package ru.tree.human;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
 
-public class Human {
+public class Human implements Serializable {
     private String name;
     private LocalDate dob, dod; // Дата рождения и смерти
     private List<Human> children; // Список детей

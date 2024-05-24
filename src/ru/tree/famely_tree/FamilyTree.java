@@ -1,10 +1,11 @@
 package ru.tree.famely_tree;
 import ru.tree.human.Human;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FamilyTree {
+public class FamilyTree implements Serializable {
     private List<Human> humanList;
 
     public FamilyTree() {
@@ -23,5 +24,14 @@ public class FamilyTree {
             }
         }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (Human human : humanList) {
+            result.append(human.toString()).append("\n");
+        }
+        return result.toString();
     }
 }
